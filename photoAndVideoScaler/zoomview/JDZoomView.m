@@ -9,7 +9,8 @@
 #import "JDZoomView.h"
 #import "UIView+Frame.h"
 #import "JDScaleView.h"
-
+#define K_ZOOMW [UIScreen mainScreen].bounds.size.width
+#define K_ZOOMH [UIScreen mainScreen].bounds.size.height
 @interface JDZoomView()<UIScrollViewDelegate>
 {
     UIScrollView *_contentView;
@@ -61,11 +62,17 @@
     [self.contentView addSubview:self.volumeBubbleView];
     [self.cursorBgView addSubview:self.cursorImg];
     
+    //计算出每帧的宽度，默认最小颗粒：1帧，最小颗粒的时候：每帧宽度K_ZOOMW/4
+    //设置内容的可显示范围
+    CGFloat allSizeWidth = K_ZOOMW+((K_ZOOMW/2)/4)*self.duration;
+    self.contentView.contentSize = CGSizeMake(allSizeWidth, 0);
+    
+    //添加拖动手势
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panAction:)];
     [self.cursorBgView addGestureRecognizer:pan];
     
-    UIPinchGestureRecognizer *pin = [[UIPinchGestureRecognizer alloc] init];
-    [pin addTarget:self action:@selector(pinchGesture:)];
+    //添加捏合手势
+    UIPinchGestureRecognizer *pin = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchGesture:)];
     [self.contentView addGestureRecognizer:pin];
     [self.cursorBgView addObserver:self forKeyPath:@"center" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
 }
@@ -271,7 +278,7 @@
 {
     if (!_cursorBgView) {
         _cursorBgView = [[UIView alloc] init];
-        _cursorBgView.backgroundColor = [UIColor clearColor];
+        _cursorBgView.backgroundColor = [UIColor greenColor];
         _cursorBgView.frame = CGRectMake(0, 0, 40, 25);
     }
     return _cursorBgView;

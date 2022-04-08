@@ -10,7 +10,6 @@
 		119E055E91205F3FA392B296 /* Pods_photoAndVideoScalerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44EA6FD782B3F72799522C1 /* Pods_photoAndVideoScalerTests.framework */; };
 		4F4F03F6C69A063F99ED5944 /* Pods_photoAndVideoScaler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF8729F9A1273F72DF86D95 /* Pods_photoAndVideoScaler.framework */; };
 		B50A63FA27FE970D007175D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B50A63F927FE970D007175D6 /* AppDelegate.m */; };
-		B50A63FD27FE970D007175D6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B50A63FC27FE970D007175D6 /* SceneDelegate.m */; };
 		B50A640027FE970D007175D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B50A63FF27FE970D007175D6 /* ViewController.m */; };
 		B50A640327FE970D007175D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B50A640127FE970D007175D6 /* Main.storyboard */; };
 		B50A640527FE970F007175D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B50A640427FE970F007175D6 /* Assets.xcassets */; };
@@ -22,6 +21,8 @@
 		B50A643E27FEC923007175D6 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = B50A643927FEC923007175D6 /* UIView+Frame.m */; };
 		B50A643F27FEC923007175D6 /* JDZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B50A643C27FEC923007175D6 /* JDZoomView.m */; };
 		B50A644027FEC923007175D6 /* JDScaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B50A643D27FEC923007175D6 /* JDScaleView.m */; };
+		B50A644327FFE1EB007175D6 /* BottomFrameZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B50A644227FFE1EB007175D6 /* BottomFrameZoomView.m */; };
+		B50A644527FFE1F9007175D6 /* BottomFrameZoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50A644427FFE1F9007175D6 /* BottomFrameZoomView.xib */; };
 		C40E649D102658B5811F620C /* Pods_photoAndVideoScaler_photoAndVideoScalerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C5F298C878D0ACEDC39891 /* Pods_photoAndVideoScaler_photoAndVideoScalerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +55,6 @@
 		B50A63F527FE970D007175D6 /* photoAndVideoScaler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photoAndVideoScaler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50A63F827FE970D007175D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B50A63F927FE970D007175D6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B50A63FB27FE970D007175D6 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		B50A63FC27FE970D007175D6 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		B50A63FE27FE970D007175D6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B50A63FF27FE970D007175D6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B50A640227FE970D007175D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +73,9 @@
 		B50A643B27FEC923007175D6 /* JDScaleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDScaleView.h; sourceTree = "<group>"; };
 		B50A643C27FEC923007175D6 /* JDZoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDZoomView.m; sourceTree = "<group>"; };
 		B50A643D27FEC923007175D6 /* JDScaleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDScaleView.m; sourceTree = "<group>"; };
+		B50A644127FFE1EB007175D6 /* BottomFrameZoomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomFrameZoomView.h; sourceTree = "<group>"; };
+		B50A644227FFE1EB007175D6 /* BottomFrameZoomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomFrameZoomView.m; sourceTree = "<group>"; };
+		B50A644427FFE1F9007175D6 /* BottomFrameZoomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomFrameZoomView.xib; sourceTree = "<group>"; };
 		DF7BA4C3A03F2335C13B5BC1 /* Pods-photoAndVideoScaler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photoAndVideoScaler.debug.xcconfig"; path = "Target Support Files/Pods-photoAndVideoScaler/Pods-photoAndVideoScaler.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,8 +158,6 @@
 				B50A643727FEC907007175D6 /* zoomview */,
 				B50A63F827FE970D007175D6 /* AppDelegate.h */,
 				B50A63F927FE970D007175D6 /* AppDelegate.m */,
-				B50A63FB27FE970D007175D6 /* SceneDelegate.h */,
-				B50A63FC27FE970D007175D6 /* SceneDelegate.m */,
 				B50A63FE27FE970D007175D6 /* ViewController.h */,
 				B50A63FF27FE970D007175D6 /* ViewController.m */,
 				B50A640127FE970D007175D6 /* Main.storyboard */,
@@ -195,6 +195,9 @@
 				B50A643C27FEC923007175D6 /* JDZoomView.m */,
 				B50A643A27FEC923007175D6 /* UIView+Frame.h */,
 				B50A643927FEC923007175D6 /* UIView+Frame.m */,
+				B50A644127FFE1EB007175D6 /* BottomFrameZoomView.h */,
+				B50A644227FFE1EB007175D6 /* BottomFrameZoomView.m */,
+				B50A644427FFE1F9007175D6 /* BottomFrameZoomView.xib */,
 			);
 			path = zoomview;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B50A644527FFE1F9007175D6 /* BottomFrameZoomView.xib in Resources */,
 				B50A640827FE970F007175D6 /* LaunchScreen.storyboard in Resources */,
 				B50A640527FE970F007175D6 /* Assets.xcassets in Resources */,
 				B50A640327FE970D007175D6 /* Main.storyboard in Resources */,
@@ -401,12 +405,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B50A644327FFE1EB007175D6 /* BottomFrameZoomView.m in Sources */,
 				B50A640027FE970D007175D6 /* ViewController.m in Sources */,
 				B50A63FA27FE970D007175D6 /* AppDelegate.m in Sources */,
 				B50A640B27FE970F007175D6 /* main.m in Sources */,
 				B50A643E27FEC923007175D6 /* UIView+Frame.m in Sources */,
 				B50A644027FEC923007175D6 /* JDScaleView.m in Sources */,
-				B50A63FD27FE970D007175D6 /* SceneDelegate.m in Sources */,
 				B50A643F27FEC923007175D6 /* JDZoomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

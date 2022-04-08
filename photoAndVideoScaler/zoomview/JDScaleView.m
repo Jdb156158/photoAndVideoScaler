@@ -34,26 +34,28 @@
     CGContextSetStrokeColorWithColor(ctx, self.strokeColor.CGColor);
     
     CGFloat linex = 0;
-    NSInteger i = 0;
+    NSInteger i = 1;
     while (linex < rect.size.width) {
         
-        if (i % 60 == 0 || i == 0) {
-            [self drawLineWithContex:ctx startPoint:CGPointMake(linex, rect.size.height) length:rect.size.height timeString:[NSString stringWithFormat:@"%ld",i / 60]];
-        }
+        [self drawLineWithContex:ctx startPoint:CGPointMake(linex, rect.size.height) length:rect.size.height timeString:[NSString stringWithFormat:@"%ld",i ]];
         
-        if (self.currentScale < 3) {
-            if (i % 10 == 0 && i % 60 != 0) {
-                [self drawLineWithContex:ctx startPoint:CGPointMake(linex, rect.size.height) length:kSecondsHeight  timeString:nil];
-            }
-        } else if (self.currentScale < 5){
-            if (i % 5 == 0 && i % 60 != 0) {
-                [self drawLineWithContex:ctx startPoint:CGPointMake(linex, rect.size.height) length:kSecondsHeight timeString:nil];
-            }
-        } else {
-            if (i % 2 == 0 && i % 60 != 0) {
-                [self drawLineWithContex:ctx startPoint:CGPointMake(linex, rect.size.height) length:kSecondsHeight timeString:nil];
-            }
-        }
+//        if (i % 60 == 0 || i == 0) {
+//            [self drawLineWithContex:ctx startPoint:CGPointMake(linex, rect.size.height) length:rect.size.height timeString:[NSString stringWithFormat:@"%ld",i / 60]];
+//        }
+//
+//        if (self.currentScale < 3) {
+//            if (i % 10 == 0 && i % 60 != 0) {
+//                [self drawLineWithContex:ctx startPoint:CGPointMake(linex, rect.size.height) length:kSecondsHeight  timeString:nil];
+//            }
+//        } else if (self.currentScale < 5){
+//            if (i % 5 == 0 && i % 60 != 0) {
+//                [self drawLineWithContex:ctx startPoint:CGPointMake(linex, rect.size.height) length:kSecondsHeight timeString:nil];
+//            }
+//        } else {
+//            if (i % 2 == 0 && i % 60 != 0) {
+//                [self drawLineWithContex:ctx startPoint:CGPointMake(linex, rect.size.height) length:kSecondsHeight timeString:nil];
+//            }
+//        }
         linex +=  self.secondPerPoint * self.currentScale ; // 位置
         i ++; // 时间
     }
@@ -65,7 +67,7 @@
     CGContextAddLineToPoint(ctx, point.x, point.y - length);
     CGContextStrokePath(ctx);
     if (timeString) {
-        [timeString drawInRect:CGRectMake(point.x + 2, point.y - length + 2, 40, 10) withAttributes:self.attributes];
+        [timeString drawInRect:CGRectMake(point.x, point.y - length + 2, 40, 10) withAttributes:self.attributes];
     }
 }
 

@@ -25,6 +25,7 @@
 @property (nonatomic, assign) NSTimeInterval pointPerSeconds; //!< 每个点代表的秒数
 @property (nonatomic, assign) CGFloat maxScale;
 @property (nonatomic, assign) CGFloat minScale;
+@property (nonatomic, assign) NSInteger imageCount;
 @property (nonatomic, strong, readonly) UIScrollView *contentView; //!< 需同步缩放的子控件添加到contentView
 @end
 
