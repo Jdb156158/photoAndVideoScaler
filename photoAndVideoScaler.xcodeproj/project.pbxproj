@@ -23,6 +23,9 @@
 		B50A644027FEC923007175D6 /* JDScaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B50A643D27FEC923007175D6 /* JDScaleView.m */; };
 		B50A644327FFE1EB007175D6 /* BottomFrameZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B50A644227FFE1EB007175D6 /* BottomFrameZoomView.m */; };
 		B50A644527FFE1F9007175D6 /* BottomFrameZoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50A644427FFE1F9007175D6 /* BottomFrameZoomView.xib */; };
+		B5B8962C2803FE8C00F3CF03 /* TimeRulerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B896262803FE8C00F3CF03 /* TimeRulerLayer.m */; };
+		B5B8962D2803FE8C00F3CF03 /* TimeRuler.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B896292803FE8C00F3CF03 /* TimeRuler.m */; };
+		B5B8962E2803FE8C00F3CF03 /* TimeRulerMark.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B8962B2803FE8C00F3CF03 /* TimeRulerMark.m */; };
 		C40E649D102658B5811F620C /* Pods_photoAndVideoScaler_photoAndVideoScalerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C5F298C878D0ACEDC39891 /* Pods_photoAndVideoScaler_photoAndVideoScalerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +79,12 @@
 		B50A644127FFE1EB007175D6 /* BottomFrameZoomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomFrameZoomView.h; sourceTree = "<group>"; };
 		B50A644227FFE1EB007175D6 /* BottomFrameZoomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomFrameZoomView.m; sourceTree = "<group>"; };
 		B50A644427FFE1F9007175D6 /* BottomFrameZoomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomFrameZoomView.xib; sourceTree = "<group>"; };
+		B5B896262803FE8C00F3CF03 /* TimeRulerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeRulerLayer.m; sourceTree = "<group>"; };
+		B5B896272803FE8C00F3CF03 /* TimeRulerMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeRulerMark.h; sourceTree = "<group>"; };
+		B5B896282803FE8C00F3CF03 /* TimeRulerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeRulerLayer.h; sourceTree = "<group>"; };
+		B5B896292803FE8C00F3CF03 /* TimeRuler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeRuler.m; sourceTree = "<group>"; };
+		B5B8962A2803FE8C00F3CF03 /* TimeRuler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeRuler.h; sourceTree = "<group>"; };
+		B5B8962B2803FE8C00F3CF03 /* TimeRulerMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeRulerMark.m; sourceTree = "<group>"; };
 		DF7BA4C3A03F2335C13B5BC1 /* Pods-photoAndVideoScaler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photoAndVideoScaler.debug.xcconfig"; path = "Target Support Files/Pods-photoAndVideoScaler/Pods-photoAndVideoScaler.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +164,7 @@
 		B50A63F727FE970D007175D6 /* photoAndVideoScaler */ = {
 			isa = PBXGroup;
 			children = (
+				B5B896252803E5DD00F3CF03 /* timeRulerView */,
 				B50A643727FEC907007175D6 /* zoomview */,
 				B50A63F827FE970D007175D6 /* AppDelegate.h */,
 				B50A63F927FE970D007175D6 /* AppDelegate.m */,
@@ -200,6 +210,19 @@
 				B50A644427FFE1F9007175D6 /* BottomFrameZoomView.xib */,
 			);
 			path = zoomview;
+			sourceTree = "<group>";
+		};
+		B5B896252803E5DD00F3CF03 /* timeRulerView */ = {
+			isa = PBXGroup;
+			children = (
+				B5B8962A2803FE8C00F3CF03 /* TimeRuler.h */,
+				B5B896292803FE8C00F3CF03 /* TimeRuler.m */,
+				B5B896282803FE8C00F3CF03 /* TimeRulerLayer.h */,
+				B5B896262803FE8C00F3CF03 /* TimeRulerLayer.m */,
+				B5B896272803FE8C00F3CF03 /* TimeRulerMark.h */,
+				B5B8962B2803FE8C00F3CF03 /* TimeRulerMark.m */,
+			);
+			path = timeRulerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,11 +429,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B50A644327FFE1EB007175D6 /* BottomFrameZoomView.m in Sources */,
+				B5B8962C2803FE8C00F3CF03 /* TimeRulerLayer.m in Sources */,
 				B50A640027FE970D007175D6 /* ViewController.m in Sources */,
 				B50A63FA27FE970D007175D6 /* AppDelegate.m in Sources */,
+				B5B8962E2803FE8C00F3CF03 /* TimeRulerMark.m in Sources */,
 				B50A640B27FE970F007175D6 /* main.m in Sources */,
 				B50A643E27FEC923007175D6 /* UIView+Frame.m in Sources */,
 				B50A644027FEC923007175D6 /* JDScaleView.m in Sources */,
+				B5B8962D2803FE8C00F3CF03 /* TimeRuler.m in Sources */,
 				B50A643F27FEC923007175D6 /* JDZoomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
