@@ -24,6 +24,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     //self.view.backgroundColor = [UIColor brownColor];
     
 //    self.bottomFramesZoomView.imageCount = 8;
@@ -41,7 +43,7 @@
 //    [zooomView.contentView addSubview:subView];
 //    self.subView = subView;
     
-    TimeRuler *time = [[TimeRuler alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height-250, self.view.bounds.size.width, 250)];
+    TimeRuler *time = [[TimeRuler alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height * 0.5 - 40.0, self.view.bounds.size.width, 180)];
     NSArray *array = @[@{@"start": @60,@"end": @300},
                        @{@"start": @500,@"end": @800},
                        @{@"start": @3600,@"end": @4800},
