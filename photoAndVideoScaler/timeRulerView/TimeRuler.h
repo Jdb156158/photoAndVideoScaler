@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TimeRuler : UIControl
 
+@property(nonatomic,assign)NSInteger imageCount;
 - (void)setSelectedRange:(NSArray*)rangeArray;
 
 @end

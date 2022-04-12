@@ -11,7 +11,7 @@
 // 侧边多出部分宽度
 static CGFloat sideOffset = 30.0;
 // 时间尺最大宽度
-static CGFloat rulerMaxWidth = 10800.0;
+//static CGFloat rulerMaxWidth = 10800.0;
 
 @interface TimeRuler()<UIScrollViewDelegate>
 
@@ -23,6 +23,7 @@ static CGFloat rulerMaxWidth = 10800.0;
 @property(nonatomic)double startScale;
 @property(nonatomic)BOOL isTouch;
 @property(nonatomic)CGFloat oldRulerWidth;
+@property(nonatomic)CGFloat rulerMaxWidth;
 @property(nonatomic,retain)TimeRulerLayer *rulerLayer;
 
 
@@ -34,8 +35,8 @@ static CGFloat rulerMaxWidth = 10800.0;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self defaultValue];
-        [self setupUI];
+        //[self defaultValue];
+        //[self setupUI];
     }
     return self;
 }
@@ -44,18 +45,30 @@ static CGFloat rulerMaxWidth = 10800.0;
 {
     self = [super initWithCoder:coder];
     if (self) {
-        [self defaultValue];
+        //[self defaultValue];
     }
     return self;
 }
 
-- (void)defaultValue{
-    self.rulerWidth = 6.0 * self.bounds.size.width;
-}
+
 
 - (void)awakeFromNib{
     [super awakeFromNib];
+    //self setupUI];
+}
+
+
+- (void)setImageCount:(NSInteger)imageCount{
+    _imageCount = imageCount;
+    [self defaultValue];
     [self setupUI];
+}
+
+- (void)defaultValue{
+    self.rulerWidth = self.imageCount*([UIScreen mainScreen].bounds.size.width/2.0/4.0);
+    self.rulerMaxWidth = self.rulerWidth;
+//    self.rulerWidth = 6.0 * self.bounds.size.width;
+//    self.rulerMaxWidth = 10800.0;//self.rulerWidth;
 }
 
 - (void)setupUI{
@@ -89,8 +102,8 @@ static CGFloat rulerMaxWidth = 10800.0;
         updateRulerWidth = (self.bounds.size.width + 2 * sideOffset);
     }
     
-    if (updateRulerWidth > rulerMaxWidth){
-        updateRulerWidth = rulerMaxWidth;
+    if (updateRulerWidth > self.rulerMaxWidth){
+        updateRulerWidth = self.rulerMaxWidth;
     }
     
     self.oldRulerWidth = self.rulerWidth;
@@ -112,7 +125,7 @@ static CGFloat rulerMaxWidth = 10800.0;
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
     self.scrollView.delegate = self;
     [self.scrollView.pinchGestureRecognizer setEnabled:NO];
-    [self.scrollView setShowsHorizontalScrollIndicator:NO];
+    [self.scrollView setShowsHorizontalScrollIndicator:YES];
     if (@available(iOS 11.0, *)) {
         self.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     } else {
@@ -124,6 +137,7 @@ static CGFloat rulerMaxWidth = 10800.0;
 
 - (void)setupRulerLayer{
     self.rulerLayer = [[TimeRulerLayer alloc]init];
+    self.rulerLayer.imageCount = self.imageCount;
     [self.scrollView.layer addSublayer:self.rulerLayer];
 }
 
@@ -142,11 +156,12 @@ static CGFloat rulerMaxWidth = 10800.0;
     self.topLine.frame = CGRectMake(0, 0, self.bounds.size.width, 1.0);
     self.btmLine.frame = CGRectMake(0, self.bounds.size.height - 1.0, self.bounds.size.width, 1.0);
     // 保证缩放过程中心保持不变
-    self.scrollView.contentOffset = [self contentOffset:self.currentTime];
+    //self.scrollView.contentOffset = [self contentOffset:self.currentTime];
 }
 
 - (CGPoint)contentOffset:(int)current{
-    CGFloat proportion = current / (24 * 3600.0);
+    CGFloat proportion = current / self.imageCount;
+    //CGFloat proportion = current / (24 * 3600.0);
     CGFloat proportionWidth = (self.scrollView.contentSize.width - sideOffset * 2) * proportion;
     return CGPointMake(proportionWidth - self.scrollView.contentInset.left, self.scrollView.contentOffset.y);
 }
@@ -158,7 +173,12 @@ static CGFloat rulerMaxWidth = 10800.0;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat proportionWidth = scrollView.contentOffset.x + scrollView.contentInset.left;
     CGFloat proportion = proportionWidth/(scrollView.contentSize.width - sideOffset * 2);
-    int value = ceil(proportion * 24 * 3600);
+    if (proportion<0) {
+        proportion = 0;
+    }
+    int value = floor(proportion*self.imageCount);
+    //int value = ceil(proportion * 24 * 3600);
+    //NSLog(@"当前时间：%d",value);
     self.currentTime = value;
 }
 

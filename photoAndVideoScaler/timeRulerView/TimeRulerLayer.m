@@ -49,6 +49,11 @@ static CGFloat sideOffset = 30.0;
     [self setNeedsDisplay];
 }
 
+- (void)setImageCount:(NSInteger)imageCount{
+    _imageCount = imageCount;
+    [self setNeedsDisplay];
+}
+
 - (void)setFrame:(CGRect)frame{
     // frame改变需要重绘
     super.frame = frame;
@@ -72,75 +77,61 @@ static CGFloat sideOffset = 30.0;
 }
 
 - (void)drawToImage{
-    RulerMarkFrequency frequency = RulerMarkFrequencyminute_10;
-    // 每小时占用的宽度
-    CGFloat hourWidth = (self.bounds.size.width - sideOffset*2)/24.0;
     
-    // 根据宽度来判断显示标记的级别
-    if (hourWidth/30.0 >= 8.0){
-        frequency = RulerMarkFrequencyminute_2;
-    }else if (hourWidth / 6.0 >= 5.0){
-        frequency = RulerMarkFrequencyminute_10;
-    }else{
-        frequency = RulerMarkFrequencyhour;
+    //NSLog(@"当前可用宽度:%f",self.bounds.size.width);
+    if (self.imageCount == 0) {
+        return;
     }
     
-    int numberOfLine = 24 * 3600 / frequency;
+    bool isEven;
+    if (self.imageCount%2==0) {
+        //如果是偶数
+        isEven = YES;
+    }else{
+        //如果是奇数
+        isEven = NO;
+    }
+    
+    NSLog(@"当前图片数量:%ld",(long)self.imageCount);
+    CGFloat biaozhun = [UIScreen mainScreen].bounds.size.width/2.0/4.0;
+    CGFloat enbleShowImageCount = self.bounds.size.width/biaozhun;
+    NSLog(@"当前宽度能显示的图片数量:%f",enbleShowImageCount);
+    int scanel = ceil(self.imageCount/enbleShowImageCount);
+    NSLog(@"当前缩放倍速：%d",scanel);
+    
+    NSInteger numberOfLine = self.imageCount;
+    //CGFloat lineOffset = (self.bounds.size.width - sideOffset * 2) / numberOfLine;
+    if (scanel!=1) {
+        //
+        numberOfLine = ceil(self.imageCount/scanel);
+        NSLog(@"当前宽度应该显示的图片数量:%ld",(long)numberOfLine);
+        //lineOffset = biaozhun;
+    }else{
+        //按照当前需要缩小的宽度来显示
+        //NSLog(@"当前刻度间接值:%f",self.bounds.size.width/self.imageCount);
+    }
+
     CGFloat lineOffset = (self.bounds.size.width - sideOffset * 2) / numberOfLine;
+    
+    
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, UIScreen.mainScreen.scale);
     CGContextRef ctx = UIGraphicsGetCurrentContext();
-    UIFont *font = [UIFont systemFontOfSize:11.0];
-    //行间距和字体
-    NSDictionary *dict1 = @{NSFontAttributeName:font};
-    NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:@"00:00" attributes:dict1];
-    // 计算文字最宽宽度
-    CGFloat hourTextWidth = attrString.size.width;
+
     
     if (self.selectedRange.count > 0){
-        
-        CGContextSetFillColorWithColor(ctx, [[UIColor alloc]initWithRed:238.0/255.0 green:165.0/255 blue:133.0/255 alpha:1.0].CGColor);
-        for (NSDictionary *selectedItem in self.selectedRange) {
-            int startSecond = [[selectedItem valueForKey:@"start"] intValue];
-            int endSecond = [[selectedItem valueForKey:@"end"] intValue];
-            CGFloat x = startSecond / (24 * 3600.0) * (self.bounds.size.width - sideOffset * 2) + sideOffset;
-            CGFloat width = (endSecond - startSecond) / (24 * 3600.0) * (self.bounds.size.width - sideOffset * 2);
-            CGRect rect = CGRectMake(x, 0, width, self.bounds.size.height);
-            CGContextFillRect(ctx, rect);
-        }
         
         for(int i = 0; i <= numberOfLine; i++){
             // 计算每个标记的属性
             CGFloat position = i * lineOffset;
-            int timeSecond = i * frequency;
-            BOOL showText = NO;
-            NSString *timeString = @"00:00";
+            BOOL showText = YES;
+            NSString *timeString = @"0";
             TimeRulerMark *mark = self.minorMark;
             
-            if (timeSecond % 3600 == 0){
-                // 小时标尺
-                mark = self.majorMark;
-                if (hourWidth > (hourTextWidth + 5.0)){
-                    // 每小时都能画时间
-                    showText = YES;
-                }
-                else if ((hourWidth * 3) > ((hourTextWidth + 5) * 2)){
-                    // 每两小时画一个时间
-                    showText = timeSecond % (3600 * 2) == 0;
-                }
-                else{
-                    // 每四小时画一个时间
-                    showText = timeSecond % (3600 * 4) == 0;
-                }
-            }else if (timeSecond % 600 == 0){
-                // 每10分钟的标尺
-                mark = self.middleMark;
-                showText = frequency == RulerMarkFrequencyminute_2;
+            if (i==numberOfLine) {
+                timeString = [NSString stringWithFormat:@"%ldf", (long)self.imageCount];
+            }else{
+                timeString = [NSString stringWithFormat:@"%df", i*scanel];
             }
-            
-            int hour = timeSecond / 3600;
-            int min = timeSecond % 3600 / 60;
-            
-            timeString = [NSString stringWithFormat:@"%02d:%02d", hour, min];
             [self drawMarkIn:ctx position:position timeString:timeString mark:mark showText:showText];
         }
         

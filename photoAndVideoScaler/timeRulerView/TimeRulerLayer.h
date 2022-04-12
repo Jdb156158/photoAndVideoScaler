@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic,retain)NSArray  *selectedRange;
 
+@property(nonatomic,assign)NSInteger imageCount;
 
 @end
 

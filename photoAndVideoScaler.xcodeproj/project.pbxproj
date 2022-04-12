@@ -165,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				B5B896252803E5DD00F3CF03 /* timeRulerView */,
-				B50A643727FEC907007175D6 /* zoomview */,
 				B50A63F827FE970D007175D6 /* AppDelegate.h */,
 				B50A63F927FE970D007175D6 /* AppDelegate.m */,
 				B50A63FE27FE970D007175D6 /* ViewController.h */,
@@ -205,9 +204,6 @@
 				B50A643C27FEC923007175D6 /* JDZoomView.m */,
 				B50A643A27FEC923007175D6 /* UIView+Frame.h */,
 				B50A643927FEC923007175D6 /* UIView+Frame.m */,
-				B50A644127FFE1EB007175D6 /* BottomFrameZoomView.h */,
-				B50A644227FFE1EB007175D6 /* BottomFrameZoomView.m */,
-				B50A644427FFE1F9007175D6 /* BottomFrameZoomView.xib */,
 			);
 			path = zoomview;
 			sourceTree = "<group>";
@@ -221,6 +217,10 @@
 				B5B8963228041DC000F3CF03 /* TimeRulerLayer.m */,
 				B5B8962F28041DC000F3CF03 /* TimeRulerMark.h */,
 				B5B8963128041DC000F3CF03 /* TimeRulerMark.m */,
+				B50A644127FFE1EB007175D6 /* BottomFrameZoomView.h */,
+				B50A644227FFE1EB007175D6 /* BottomFrameZoomView.m */,
+				B50A644427FFE1F9007175D6 /* BottomFrameZoomView.xib */,
+				B50A643727FEC907007175D6 /* zoomview */,
 			);
 			path = timeRulerView;
 			sourceTree = "<group>";
