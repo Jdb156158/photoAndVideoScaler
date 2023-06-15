@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		119E055E91205F3FA392B296 /* Pods_photoAndVideoScalerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44EA6FD782B3F72799522C1 /* Pods_photoAndVideoScalerTests.framework */; };
 		4F4F03F6C69A063F99ED5944 /* Pods_photoAndVideoScaler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF8729F9A1273F72DF86D95 /* Pods_photoAndVideoScaler.framework */; };
+		B501B80129729389008B5B61 /* LFGPUImageBeautyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B501B80029729389008B5B61 /* LFGPUImageBeautyFilter.m */; };
+		B501B8042972942C008B5B61 /* SCFilterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B501B8032972942C008B5B61 /* SCFilterHelper.m */; };
 		B50A63FA27FE970D007175D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B50A63F927FE970D007175D6 /* AppDelegate.m */; };
 		B50A640027FE970D007175D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B50A63FF27FE970D007175D6 /* ViewController.m */; };
 		B50A640327FE970D007175D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B50A640127FE970D007175D6 /* Main.storyboard */; };
@@ -23,9 +25,22 @@
 		B50A644027FEC923007175D6 /* JDScaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B50A643D27FEC923007175D6 /* JDScaleView.m */; };
 		B50A644327FFE1EB007175D6 /* BottomFrameZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = B50A644227FFE1EB007175D6 /* BottomFrameZoomView.m */; };
 		B50A644527FFE1F9007175D6 /* BottomFrameZoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50A644427FFE1F9007175D6 /* BottomFrameZoomView.xib */; };
+		B52F095128DAC49A00D6F8C3 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = B52F095028DAC49A00D6F8C3 /* TestView.m */; };
+		B52F095328DAC4A400D6F8C3 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B52F095228DAC4A400D6F8C3 /* TestView.xib */; };
+		B573CFB02887EDF7000E3F4D /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B573CFAE2887EDF7000E3F4D /* GPUImageBeautifyFilter.m */; };
+		B57E73A7287BD63E00E61A98 /* JbbTestCameraCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = B57E73A5287BD63E00E61A98 /* JbbTestCameraCtrl.m */; };
+		B57E73A8287BD63E00E61A98 /* JbbTestCameraCtrl.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57E73A6287BD63E00E61A98 /* JbbTestCameraCtrl.xib */; };
+		B57E73AA287C0A0000E61A98 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57E73A9287C0A0000E61A98 /* AVFoundation.framework */; };
+		B59102EB28864A4B006B8D45 /* visionCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B59102E928864A4B006B8D45 /* visionCameraViewController.m */; };
+		B59102EC28864A4B006B8D45 /* visionCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59102EA28864A4B006B8D45 /* visionCameraViewController.xib */; };
+		B59102F428864AF5006B8D45 /* FaceBeautyThinFaceFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B59102EE28864AF5006B8D45 /* FaceBeautyThinFaceFilter.m */; };
+		B59102F528864AF5006B8D45 /* FaceBeautyFaceDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = B59102F028864AF5006B8D45 /* FaceBeautyFaceDetector.m */; };
+		B59102F628864AF5006B8D45 /* FaceBeautyRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = B59102F228864AF5006B8D45 /* FaceBeautyRecorder.m */; };
 		B5B8963528041DC000F3CF03 /* TimeRulerMark.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B8963128041DC000F3CF03 /* TimeRulerMark.m */; };
 		B5B8963628041DC000F3CF03 /* TimeRulerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B8963228041DC000F3CF03 /* TimeRulerLayer.m */; };
 		B5B8963728041DC000F3CF03 /* TimeRuler.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B8963428041DC000F3CF03 /* TimeRuler.m */; };
+		B5CCC20F2886A37B0055D11B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CCC20E2886A37B0055D11B /* Accelerate.framework */; };
+		B5CCC2112886A3830055D11B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CCC2102886A3830055D11B /* AssetsLibrary.framework */; };
 		C40E649D102658B5811F620C /* Pods_photoAndVideoScaler_photoAndVideoScalerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C5F298C878D0ACEDC39891 /* Pods_photoAndVideoScaler_photoAndVideoScalerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +70,10 @@
 		92C5F298C878D0ACEDC39891 /* Pods_photoAndVideoScaler_photoAndVideoScalerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_photoAndVideoScaler_photoAndVideoScalerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C8232B35C36F388DE03B013 /* Pods-photoAndVideoScalerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photoAndVideoScalerTests.debug.xcconfig"; path = "Target Support Files/Pods-photoAndVideoScalerTests/Pods-photoAndVideoScalerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A44EA6FD782B3F72799522C1 /* Pods_photoAndVideoScalerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_photoAndVideoScalerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B501B7FF29729388008B5B61 /* LFGPUImageBeautyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFGPUImageBeautyFilter.h; sourceTree = "<group>"; };
+		B501B80029729389008B5B61 /* LFGPUImageBeautyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFGPUImageBeautyFilter.m; sourceTree = "<group>"; };
+		B501B8022972942C008B5B61 /* SCFilterHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFilterHelper.h; sourceTree = "<group>"; };
+		B501B8032972942C008B5B61 /* SCFilterHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFilterHelper.m; sourceTree = "<group>"; };
 		B50A63F527FE970D007175D6 /* photoAndVideoScaler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photoAndVideoScaler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50A63F827FE970D007175D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B50A63F927FE970D007175D6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -79,12 +98,32 @@
 		B50A644127FFE1EB007175D6 /* BottomFrameZoomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomFrameZoomView.h; sourceTree = "<group>"; };
 		B50A644227FFE1EB007175D6 /* BottomFrameZoomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomFrameZoomView.m; sourceTree = "<group>"; };
 		B50A644427FFE1F9007175D6 /* BottomFrameZoomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomFrameZoomView.xib; sourceTree = "<group>"; };
+		B52F094F28DAC49A00D6F8C3 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		B52F095028DAC49A00D6F8C3 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		B52F095228DAC4A400D6F8C3 /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
+		B573CFAE2887EDF7000E3F4D /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
+		B573CFAF2887EDF7000E3F4D /* GPUImageBeautifyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageBeautifyFilter.h; sourceTree = "<group>"; };
+		B57E73A4287BD63E00E61A98 /* JbbTestCameraCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JbbTestCameraCtrl.h; sourceTree = "<group>"; };
+		B57E73A5287BD63E00E61A98 /* JbbTestCameraCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JbbTestCameraCtrl.m; sourceTree = "<group>"; };
+		B57E73A6287BD63E00E61A98 /* JbbTestCameraCtrl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JbbTestCameraCtrl.xib; sourceTree = "<group>"; };
+		B57E73A9287C0A0000E61A98 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B59102E828864A4B006B8D45 /* visionCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = visionCameraViewController.h; sourceTree = "<group>"; };
+		B59102E928864A4B006B8D45 /* visionCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = visionCameraViewController.m; sourceTree = "<group>"; };
+		B59102EA28864A4B006B8D45 /* visionCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = visionCameraViewController.xib; sourceTree = "<group>"; };
+		B59102EE28864AF5006B8D45 /* FaceBeautyThinFaceFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceBeautyThinFaceFilter.m; sourceTree = "<group>"; };
+		B59102EF28864AF5006B8D45 /* FaceBeautyRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceBeautyRecorder.h; sourceTree = "<group>"; };
+		B59102F028864AF5006B8D45 /* FaceBeautyFaceDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceBeautyFaceDetector.m; sourceTree = "<group>"; };
+		B59102F128864AF5006B8D45 /* FaceBeautyThinFaceFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceBeautyThinFaceFilter.h; sourceTree = "<group>"; };
+		B59102F228864AF5006B8D45 /* FaceBeautyRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceBeautyRecorder.m; sourceTree = "<group>"; };
+		B59102F328864AF5006B8D45 /* FaceBeautyFaceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceBeautyFaceDetector.h; sourceTree = "<group>"; };
 		B5B8962F28041DC000F3CF03 /* TimeRulerMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeRulerMark.h; sourceTree = "<group>"; };
 		B5B8963028041DC000F3CF03 /* TimeRuler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeRuler.h; sourceTree = "<group>"; };
 		B5B8963128041DC000F3CF03 /* TimeRulerMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeRulerMark.m; sourceTree = "<group>"; };
 		B5B8963228041DC000F3CF03 /* TimeRulerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeRulerLayer.m; sourceTree = "<group>"; };
 		B5B8963328041DC000F3CF03 /* TimeRulerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeRulerLayer.h; sourceTree = "<group>"; };
 		B5B8963428041DC000F3CF03 /* TimeRuler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeRuler.m; sourceTree = "<group>"; };
+		B5CCC20E2886A37B0055D11B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		B5CCC2102886A3830055D11B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		DF7BA4C3A03F2335C13B5BC1 /* Pods-photoAndVideoScaler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photoAndVideoScaler.debug.xcconfig"; path = "Target Support Files/Pods-photoAndVideoScaler/Pods-photoAndVideoScaler.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +132,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57E73AA287C0A0000E61A98 /* AVFoundation.framework in Frameworks */,
+				B5CCC20F2886A37B0055D11B /* Accelerate.framework in Frameworks */,
 				4F4F03F6C69A063F99ED5944 /* Pods_photoAndVideoScaler.framework in Frameworks */,
+				B5CCC2112886A3830055D11B /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +174,9 @@
 		A362FAAADAFCB0818048A427 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5CCC2102886A3830055D11B /* AssetsLibrary.framework */,
+				B5CCC20E2886A37B0055D11B /* Accelerate.framework */,
+				B57E73A9287C0A0000E61A98 /* AVFoundation.framework */,
 				7BF8729F9A1273F72DF86D95 /* Pods_photoAndVideoScaler.framework */,
 				92C5F298C878D0ACEDC39891 /* Pods_photoAndVideoScaler_photoAndVideoScalerUITests.framework */,
 				A44EA6FD782B3F72799522C1 /* Pods_photoAndVideoScalerTests.framework */,
@@ -164,6 +209,8 @@
 		B50A63F727FE970D007175D6 /* photoAndVideoScaler */ = {
 			isa = PBXGroup;
 			children = (
+				B59102ED28864AF5006B8D45 /* Recorder */,
+				B57E73A3287BD61000E61A98 /* cameraView */,
 				B5B896252803E5DD00F3CF03 /* timeRulerView */,
 				B50A63F827FE970D007175D6 /* AppDelegate.h */,
 				B50A63F927FE970D007175D6 /* AppDelegate.m */,
@@ -174,6 +221,9 @@
 				B50A640627FE970F007175D6 /* LaunchScreen.storyboard */,
 				B50A640927FE970F007175D6 /* Info.plist */,
 				B50A640A27FE970F007175D6 /* main.m */,
+				B52F094F28DAC49A00D6F8C3 /* TestView.h */,
+				B52F095028DAC49A00D6F8C3 /* TestView.m */,
+				B52F095228DAC4A400D6F8C3 /* TestView.xib */,
 			);
 			path = photoAndVideoScaler;
 			sourceTree = "<group>";
@@ -208,6 +258,38 @@
 			path = zoomview;
 			sourceTree = "<group>";
 		};
+		B57E73A3287BD61000E61A98 /* cameraView */ = {
+			isa = PBXGroup;
+			children = (
+				B501B8022972942C008B5B61 /* SCFilterHelper.h */,
+				B501B8032972942C008B5B61 /* SCFilterHelper.m */,
+				B501B7FF29729388008B5B61 /* LFGPUImageBeautyFilter.h */,
+				B501B80029729389008B5B61 /* LFGPUImageBeautyFilter.m */,
+				B573CFAF2887EDF7000E3F4D /* GPUImageBeautifyFilter.h */,
+				B573CFAE2887EDF7000E3F4D /* GPUImageBeautifyFilter.m */,
+				B57E73A4287BD63E00E61A98 /* JbbTestCameraCtrl.h */,
+				B57E73A5287BD63E00E61A98 /* JbbTestCameraCtrl.m */,
+				B57E73A6287BD63E00E61A98 /* JbbTestCameraCtrl.xib */,
+				B59102E828864A4B006B8D45 /* visionCameraViewController.h */,
+				B59102E928864A4B006B8D45 /* visionCameraViewController.m */,
+				B59102EA28864A4B006B8D45 /* visionCameraViewController.xib */,
+			);
+			path = cameraView;
+			sourceTree = "<group>";
+		};
+		B59102ED28864AF5006B8D45 /* Recorder */ = {
+			isa = PBXGroup;
+			children = (
+				B59102EF28864AF5006B8D45 /* FaceBeautyRecorder.h */,
+				B59102F228864AF5006B8D45 /* FaceBeautyRecorder.m */,
+				B59102F128864AF5006B8D45 /* FaceBeautyThinFaceFilter.h */,
+				B59102EE28864AF5006B8D45 /* FaceBeautyThinFaceFilter.m */,
+				B59102F328864AF5006B8D45 /* FaceBeautyFaceDetector.h */,
+				B59102F028864AF5006B8D45 /* FaceBeautyFaceDetector.m */,
+			);
+			path = Recorder;
+			sourceTree = "<group>";
+		};
 		B5B896252803E5DD00F3CF03 /* timeRulerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +318,7 @@
 				B50A63F127FE970D007175D6 /* Sources */,
 				B50A63F227FE970D007175D6 /* Frameworks */,
 				B50A63F327FE970D007175D6 /* Resources */,
+				A6AD2363365A4DEF23011B50 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -273,6 +356,7 @@
 				B50A641627FE970F007175D6 /* Sources */,
 				B50A641727FE970F007175D6 /* Frameworks */,
 				B50A641827FE970F007175D6 /* Resources */,
+				884091666037A5FEB840897F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -334,7 +418,10 @@
 				B50A644527FFE1F9007175D6 /* BottomFrameZoomView.xib in Resources */,
 				B50A640827FE970F007175D6 /* LaunchScreen.storyboard in Resources */,
 				B50A640527FE970F007175D6 /* Assets.xcassets in Resources */,
+				B59102EC28864A4B006B8D45 /* visionCameraViewController.xib in Resources */,
 				B50A640327FE970D007175D6 /* Main.storyboard in Resources */,
+				B52F095328DAC4A400D6F8C3 /* TestView.xib in Resources */,
+				B57E73A8287BD63E00E61A98 /* JbbTestCameraCtrl.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +464,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		884091666037A5FEB840897F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-photoAndVideoScaler-photoAndVideoScalerUITests/Pods-photoAndVideoScaler-photoAndVideoScalerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-photoAndVideoScaler-photoAndVideoScalerUITests/Pods-photoAndVideoScaler-photoAndVideoScalerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-photoAndVideoScaler-photoAndVideoScalerUITests/Pods-photoAndVideoScaler-photoAndVideoScalerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9519CF8D74CAAA8702873C5C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -397,6 +501,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6AD2363365A4DEF23011B50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-photoAndVideoScaler/Pods-photoAndVideoScaler-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-photoAndVideoScaler/Pods-photoAndVideoScaler-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-photoAndVideoScaler/Pods-photoAndVideoScaler-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CFAB2C53726B9743F57E5453 /* [CP] Check Pods Manifest.lock */ = {
@@ -428,16 +549,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B59102F428864AF5006B8D45 /* FaceBeautyThinFaceFilter.m in Sources */,
+				B573CFB02887EDF7000E3F4D /* GPUImageBeautifyFilter.m in Sources */,
 				B50A644327FFE1EB007175D6 /* BottomFrameZoomView.m in Sources */,
+				B57E73A7287BD63E00E61A98 /* JbbTestCameraCtrl.m in Sources */,
 				B50A640027FE970D007175D6 /* ViewController.m in Sources */,
+				B59102EB28864A4B006B8D45 /* visionCameraViewController.m in Sources */,
 				B50A63FA27FE970D007175D6 /* AppDelegate.m in Sources */,
 				B50A640B27FE970F007175D6 /* main.m in Sources */,
 				B50A643E27FEC923007175D6 /* UIView+Frame.m in Sources */,
 				B5B8963628041DC000F3CF03 /* TimeRulerLayer.m in Sources */,
 				B50A644027FEC923007175D6 /* JDScaleView.m in Sources */,
 				B5B8963528041DC000F3CF03 /* TimeRulerMark.m in Sources */,
+				B501B80129729389008B5B61 /* LFGPUImageBeautyFilter.m in Sources */,
+				B59102F528864AF5006B8D45 /* FaceBeautyFaceDetector.m in Sources */,
+				B52F095128DAC49A00D6F8C3 /* TestView.m in Sources */,
+				B501B8042972942C008B5B61 /* SCFilterHelper.m in Sources */,
 				B50A643F27FEC923007175D6 /* JDZoomView.m in Sources */,
 				B5B8963728041DC000F3CF03 /* TimeRuler.m in Sources */,
+				B59102F628864AF5006B8D45 /* FaceBeautyRecorder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +673,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -595,7 +725,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -612,20 +742,41 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R8KSPPM79K;
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					NDEBUG,
+					DLIB_JPEG_SUPPORT,
+					DDLIB_USE_BLAS,
+					DLIB_USE_LAPACK,
+					DLIB_NO_GUI_SUPPORT,
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GPUImage/GPUImage.framework/Headers\"",
+					"\"$(SRCROOT)/photoAndVideoScaler\"",
+				);
 				INFOPLIST_FILE = photoAndVideoScaler/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "开启相机权限，您将可以拍摄或者使用本地图片制作并生成Gif图片";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = aaaaa;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/photoAndVideoScaler/dlib",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bing.photoAndVideoScaler;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbbtest.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -641,20 +792,41 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R8KSPPM79K;
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					NDEBUG,
+					DLIB_JPEG_SUPPORT,
+					DDLIB_USE_BLAS,
+					DLIB_USE_LAPACK,
+					DLIB_NO_GUI_SUPPORT,
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GPUImage/GPUImage.framework/Headers\"",
+					"\"$(SRCROOT)/photoAndVideoScaler\"",
+				);
 				INFOPLIST_FILE = photoAndVideoScaler/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "开启相机权限，您将可以拍摄或者使用本地图片制作并生成Gif图片";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = aaaaa;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/photoAndVideoScaler/dlib",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bing.photoAndVideoScaler;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbbtest.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -141,6 +141,9 @@
 {
     CGPoint point = [gesture translationInView:self.superview];
     [gesture setTranslation:CGPointZero inView:self.superview];
+    
+    NSLog(@"=====point:%f",point.x);
+    
     _cursorPosition += point.x / self.currentScale;
     
     if (_cursorPosition < 0 || _cursorPosition > self.frame.size.width) { // 限制边上的距离

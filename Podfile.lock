@@ -1,3 +1,20 @@
-PODFILE CHECKSUM: 38172ddf1df06ddebdd38d7eb0e8c7699f50a4ee
+PODS:
+  - GPUImage (0.1.7)
+  - MLImageSegmentationLibrary (2.0.4.300)
+
+DEPENDENCIES:
+  - GPUImage
+  - MLImageSegmentationLibrary (~> 2.0.4.300)
+
+SPEC REPOS:
+  trunk:
+    - GPUImage
+    - MLImageSegmentationLibrary
+
+SPEC CHECKSUMS:
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  MLImageSegmentationLibrary: 2ad2730b4e33866796c2f0609999f4438b2249bb
+
+PODFILE CHECKSUM: 1814ebbfac9f630be7af384ce3e27952eef8c5f8
 
 COCOAPODS: 1.11.2

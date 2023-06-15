@@ -8,14 +8,16 @@
 #import "ViewController.h"
 #import "JDZoomView.h"
 #import "BottomFrameZoomView.h"
-
-
+#import "JbbTestCameraCtrl.h"
+#import "visionCameraViewController.h"
+#import "TestView.h"
 // 拿到xib中的view
 #define XIBBundleView(bundle, xibName, _owner) [[bundle loadNibNamed:xibName owner:_owner options:nil] firstObject]
 
 @interface ViewController ()<JDZoomViewDelegate>
 @property (nonatomic, weak) UIView *subView;
 @property (nonatomic, strong) BottomFrameZoomView *bottomFramesZoomView;
+@property (nonatomic, strong) TestView *test1view;
 @end
 
 @implementation ViewController
@@ -24,11 +26,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor blackColor];
     
-    //self.view.backgroundColor = [UIColor brownColor];
+    UIButton *nextBtn = [[UIButton alloc] init];
+    nextBtn.frame = CGRectMake(self.view.frame.size.width/2.0-50, self.view.frame.size.height/2.0-50, 100, 100);
+    [nextBtn setTitle:@"拍照" forState:UIControlStateNormal];
+    [nextBtn addTarget:self
+                    action:@selector(clickNextBtn2)
+          forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:nextBtn];
     
-    //self.bottomFramesZoomView.imageCount = 8;
+    self.test1view = XIBBundleView([NSBundle bundleForClass:[self class]], @"TestView", nil);
+    //self.test1view.frame = CGRectMake(0, 130, [UIScreen mainScreen].bounds.size.width, 20);
+    self.test1view.frame =  CGRectMake(0, 130, 100, 100);
+    [self.view addSubview:self.test1view];
+    
+    self.bottomFramesZoomView.imageCount = 8;
     [self.view addSubview:self.bottomFramesZoomView];
 
 //    JDZoomView *zooomView = [[JDZoomView alloc] initWithFrame:CGRectMake(0, 150, [UIScreen mainScreen].bounds.size.width, 600) duration:200];
@@ -59,8 +72,26 @@
 - (BottomFrameZoomView *)bottomFramesZoomView {
     if (!_bottomFramesZoomView) {
         _bottomFramesZoomView = XIBBundleView([NSBundle bundleForClass:[self class]], @"BottomFrameZoomView", nil);
-        _bottomFramesZoomView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height-250, [UIScreen mainScreen].bounds.size.width, 250);
+        _bottomFramesZoomView.frame = CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 10);
     }
     return _bottomFramesZoomView;
+}
+
+//- (TestView *)test1view{
+//    if (!_test1view) {
+//        _test1view = XIBBundleView([NSBundle bundleForClass:[self class]], @"TestView", nil);
+//        _test1view.frame = CGRectMake(0, 130, [UIScreen mainScreen].bounds.size.width, 100);
+//    }
+//    return _test1view;
+//}
+
+- (IBAction)clickNextBtn:(id)sender {
+    JbbTestCameraCtrl *next = [[JbbTestCameraCtrl alloc] init];
+    [self.navigationController pushViewController:next animated:YES];
+}
+
+-(void)clickNextBtn2{
+    JbbTestCameraCtrl *next = [[JbbTestCameraCtrl alloc] init];
+    [self.navigationController pushViewController:next animated:YES];
 }
 @end
